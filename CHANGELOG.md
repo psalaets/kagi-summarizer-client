@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.1.1] - 2023-05-01
+
+### Fixed
+
+- Build script mistake.
+
 ## [1.1.0] - 2023-05-01
 
 ### Added

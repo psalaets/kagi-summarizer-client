@@ -9,6 +9,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "preship": "npm run build",
     "ship": "np --no-tests"
   },
   "files": [

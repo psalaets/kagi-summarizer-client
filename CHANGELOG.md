@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.1.2] - 2023-05-01
+
+### Fixed
+
+- Clean up response handling.
+
 ## [1.1.1] - 2023-05-01
 
 ### Fixed

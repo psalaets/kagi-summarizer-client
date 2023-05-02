@@ -63,15 +63,16 @@ export function create(settings: Settings) {
 };
 
 function handleResponse(resp: Response) {
-  return extractError(resp)
-    .then(errorDetails => {
+  return resp.json()
+    .then(json => {
+      const errorDetails = extractError(resp, json)
       if (errorDetails) {
         const err = new Error(errorDetails.message) as any;
         err.status = errorDetails.status;
         err.statusText = errorDetails.statusText;
-        return Promise.reject(err);
+        throw err;
       } else {
-        return resp.json() as Promise<SummarizerResponse>;
+        return json as SummarizerResponse;
       }
     });
 }

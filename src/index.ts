@@ -1,5 +1,6 @@
-import type { SummarizerResponse } from './response.js';
+import { SummarizerResponse, extractError } from './response.js';
 import type { Language } from './languages.js';
+import { validateText, validateUrl } from './validate.js';
 
 export type { SummarizerResponse } from './response.js'
 export { languages } from './languages.js';
@@ -30,6 +31,8 @@ export function create(settings: Settings) {
 
   return {
     summarizeUrl(url: string, options: Options = {}) {
+      validateUrl(url);
+
       const queryParams = new URLSearchParams([
         ['url', url],
         ...Object.entries(options)
@@ -41,9 +44,11 @@ export function create(settings: Settings) {
         method: 'GET',
         headers: headers(),
       })
-        .then(resp => resp.json() as Promise<SummarizerResponse>);
+        .then(handleResponse);
     },
     summarizeText(text: string, options: Options = {}) {
+      validateText(text);
+
       return fetch(kagiUrl, {
         method: 'POST',
         headers: headers({'Content-Type': 'application/json'}),
@@ -52,7 +57,21 @@ export function create(settings: Settings) {
           ...options,
         }),
       })
-        .then(resp => resp.json() as Promise<SummarizerResponse>);
+        .then(handleResponse);
     },
   };
 };
+
+function handleResponse(resp: Response) {
+  return extractError(resp)
+    .then(errorDetails => {
+      if (errorDetails) {
+        const err = new Error(errorDetails.message) as any;
+        err.status = errorDetails.status;
+        err.statusText = errorDetails.statusText;
+        return Promise.reject(err);
+      } else {
+        return resp.json() as Promise<SummarizerResponse>;
+      }
+    });
+}

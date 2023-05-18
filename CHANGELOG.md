@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.1.3] - 2023-05-01
+
+### Changed
+
+- Metadata change to improve tool compat
+
 ## [1.1.2] - 2023-05-01
 
 ### Fixed

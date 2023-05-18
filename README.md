@@ -23,7 +23,7 @@ console.log(textResult.data.output);
 
 ## API
 
-### `create(settings: Settings)`
+### `const summarizer = create(settings: Settings)`
 
 Create a summarizer client with the given settings.
 
@@ -70,7 +70,7 @@ Returns: `Promise<SummarizerResponse>` (See above)
 
 ## Options
 
-`summarizeUrl` and `summarizeText` both accept an optional Options object as
+`summarizeUrl` and `summarizeText` both accept an optional `Options` object as
 the 2nd parameter.
 
 ### Summary Engine

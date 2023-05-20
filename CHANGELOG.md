@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.0] - 2023-05-19
+
+### Breaking
+
+- Added `cecil` as an option for the `engine` option.
+
 ## [1.1.3] - 2023-05-01
 
 ### Changed

@@ -77,7 +77,7 @@ the 2nd parameter.
 
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {
-  engine: 'agnes' // 'daphne', 'muriel'
+  engine: 'cecil' // 'agnes', 'daphne', 'muriel'
 });
 ```
 
@@ -101,9 +101,11 @@ summarizer.summarizeUrl('https://page.com/article', {
 
 ### Kagi Cache Behavior
 
+Whether to allow cached requests and responses.
+
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {
-  cache: false
+  cache: true
 });
 ```
 

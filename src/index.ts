@@ -12,7 +12,7 @@ export type Settings = {
 
 export type Options = {
   /** Summarizer engine to use */
-  engine?: 'agnes' | 'daphne' | 'muriel',
+  engine?: 'cecil' | 'agnes' | 'daphne' | 'muriel',
   /** Summary format */
   summaryType?: 'summary' | 'takeaway',
   /** Desired summary language */

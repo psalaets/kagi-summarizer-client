@@ -11,13 +11,15 @@ Wrapper for the [Kagi Universal Summarizer API](https://help.kagi.com/kagi/api/s
 ```ts
 import { create } from 'kagi-summarizer-client';
 
-const token = '...'; // Kagi Summarizer API token
-const summarizer = create({token});
+const summarizer = create({
+  // Kagi Summarizer API token
+  token: '...'
+});
 
 const urlResult = await summarizer.summarizeUrl('https://page.com/article');
 console.log(urlResult.data.output);
 
-const textResult = await summarizer.summarizeText('asdf');
+const textResult = await summarizer.summarizeText('lorem ipsum');
 console.log(textResult.data.output);
 ```
 

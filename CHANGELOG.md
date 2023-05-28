@@ -4,7 +4,7 @@
 
 ### Breaking
 
-- Added `cecil` as an option for the `engine` option.
+- Added `cecil` as a value for the `engine` option.
 
 ## [1.1.3] - 2023-05-01
 

@@ -35,7 +35,7 @@ export function create(settings: Settings) {
 
       const queryParams = new URLSearchParams([
         ['url', url],
-        ...Object.entries(options)
+        ...Object.entries(toKagiNames(options))
           .filter(([_, v]) => v != null)
           .map(([k, v]) => [k, String(v)])
       ]);
@@ -54,13 +54,23 @@ export function create(settings: Settings) {
         headers: headers({'Content-Type': 'application/json'}),
         body: JSON.stringify({
           text,
-          ...options,
+          ...toKagiNames(options),
         }),
       })
         .then(handleResponse);
     },
   };
 };
+
+function toKagiNames(options: Options) {
+  const {targetLanguage, summaryType, ...others} = options;
+
+  return {
+    ...others,
+    target_language: targetLanguage,
+    summary_type: summaryType,
+  };
+}
 
 function handleResponse(resp: Response) {
   return resp.json()

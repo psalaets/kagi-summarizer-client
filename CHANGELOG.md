@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.1] - 2023-06-02
+
+### Fixed
+
+- Use correct snakecase parameter names.
+
 ## [2.0.0] - 2023-05-19
 
 ### Breaking

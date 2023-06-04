@@ -4,7 +4,9 @@ Client for the [Kagi Universal Summarizer API](https://help.kagi.com/kagi/api/su
 
 ## Install
 
-`npm install kagi-summarizer-client`
+```
+npm install kagi-summarizer-client
+```
 
 ## Example
 

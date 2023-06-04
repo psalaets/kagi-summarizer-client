@@ -1,6 +1,6 @@
 # kagi-summarizer-client
 
-Wrapper for the [Kagi Universal Summarizer API](https://help.kagi.com/kagi/api/summarizer.html).
+Client for the [Kagi Universal Summarizer API](https://help.kagi.com/kagi/api/summarizer.html).
 
 ## Install
 
@@ -31,7 +31,7 @@ Create a summarizer client with the given settings.
 
 ```ts
 type Settings = {
-  /** Kagi Summarizer API token */
+  // Kagi Summarizer API token from https://kagi.com/settings?p=api
   token: string,
 };
 ```
@@ -42,7 +42,7 @@ Returns: summarizer
 
 Summarize some content on the web.
 
-Note: Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
+Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
 this function depending on content length and the engine selected.
 
 Returns: `Promise<SummarizerResponse>`
@@ -65,7 +65,7 @@ type SummarizerResponse = {
 
 Summarize some text.
 
-Note: Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
+Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
 this function depending on content length and the engine selected.
 
 Returns: `Promise<SummarizerResponse>` (See above)

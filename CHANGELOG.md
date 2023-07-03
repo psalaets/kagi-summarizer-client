@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.1.0] - 2023-07-03
+
+### Added
+
+- Added `meta.api_balance` to response body type.
+
 ## [2.0.1] - 2023-06-02
 
 ### Fixed

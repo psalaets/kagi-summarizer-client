@@ -55,9 +55,12 @@ type SummarizerResponse = {
     id: string,
     node: string,
     ms: number,
+    // API balance remaining (USD)
+    api_balance: number,
   },
   data: {
-    output: string, // This is the summary
+    // The summary
+    output: string,
     tokens: number,
   }
 };

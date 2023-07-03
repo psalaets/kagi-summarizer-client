@@ -3,6 +3,7 @@ export type SummarizerResponse = {
     id: string,
     node: string,
     ms: number,
+    api_balance: number,
   },
   data: {
     output: string,

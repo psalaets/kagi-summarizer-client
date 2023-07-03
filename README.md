@@ -82,7 +82,7 @@ the 2nd parameter.
 
 ### Summary Engine
 
-Specify the [summarization engine](https://help.kagi.com/kagi/api/s.html#summarization-engines).
+Specify the [summarization engine](https://help.kagi.com/kagi/api/summarizer.html#summarization-engines).
 
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {

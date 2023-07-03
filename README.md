@@ -73,7 +73,7 @@ Summarize some text.
 Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
 this function depending on content length and the engine selected.
 
-Returns: `Promise<SummarizerResponse>` (See above)
+Returns: `Promise<SummarizerResponse>` (See typedef above)
 
 ## Options
 
@@ -82,13 +82,17 @@ the 2nd parameter.
 
 ### Summary Engine
 
+Specify the [summarization engine](https://help.kagi.com/kagi/api/summarizer.html#summarization-engines).
+
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {
   engine: 'cecil' // 'agnes', 'daphne', 'muriel'
 });
 ```
 
-### Summary Format
+### Summary Type
+
+Specify the [summary type](https://help.kagi.com/kagi/api/summarizer.html#summary-types).
 
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {

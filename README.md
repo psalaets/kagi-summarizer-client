@@ -21,7 +21,7 @@ const summarizer = create({
 const urlResult = await summarizer.summarizeUrl('https://page.com/article');
 console.log(urlResult.data.output);
 
-const textResult = await summarizer.summarizeText('lorem ipsum');
+const textResult = await summarizer.summarizeText('foo bar baz');
 console.log(textResult.data.output);
 ```
 
@@ -40,9 +40,9 @@ type Settings = {
 
 Returns: summarizer
 
-### `summarizer.summarizeUrl(url: string, options: Options = {})`
+### `summarizer.summarizeUrl(url: string, options = {})`
 
-Summarize some content on the web.
+Summarize content on the web.
 
 Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
 this function depending on content length and the engine selected.
@@ -66,9 +66,9 @@ type SummarizerResponse = {
 };
 ```
 
-### `summarizer.summarizeText(text: string, options: Options = {})`
+### `summarizer.summarizeText(text: string, options = {})`
 
-Summarize some text.
+Summarize text.
 
 Your Kagi account will be charged $0.03 to $1.00 **per invocation** of
 this function depending on content length and the engine selected.
@@ -82,7 +82,7 @@ the 2nd parameter.
 
 ### Summary Engine
 
-Specify the [summarization engine](https://help.kagi.com/kagi/api/summarizer.html#summarization-engines).
+Specify the [summarization engine](https://help.kagi.com/kagi/api/s.html#summarization-engines).
 
 ```ts
 summarizer.summarizeUrl('https://page.com/article', {

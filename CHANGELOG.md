@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.2.0] - 2024-01-24
+
+### Added
+
+- Added `languages.ChineseSimplified` and `languages.ChineseTraditional`
+
 ## [2.1.0] - 2023-07-03
 
 ### Added

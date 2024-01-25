@@ -27,7 +27,10 @@ export const languages = {
   Swedish: 'SV',
   Turkish: 'TR',
   Ukrainian: 'UK',
+  /** Same as `ChineseSimplified` */
   Chinese: 'ZH',
+  ChineseSimplified: 'ZH',
+  ChineseTraditional: 'ZH-HANT',
 } as const;
 
 export type Language = typeof languages[keyof typeof languages];
